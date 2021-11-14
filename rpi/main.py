@@ -18,7 +18,7 @@ bus = smbus.SMBus(1)
 
 # 创建一个MODBUS-TCP对象并开启服务
 logger = modbus_tk.utils.create_logger(name="console", record_format="%(message)s")
-server = modbus_tcp.TcpServer(address="192.168.0.122", port=502)
+server = modbus_tcp.TcpServer(address="192.168.0.108", port=502)
 server.start()
 
 # 添加一个slaver，给这个slaver添加温度、湿度、光照、空气质量的block(Niagara中称为Point)
@@ -96,8 +96,8 @@ while True:
     # 更新空气质量传感器的值
     slaver.set_values('Air', 188, air)
 
-    m = max30102.MAX30102()
-    red, ir = m.read_sequential()
-    print(red,ir)    
+#    m = max30102.MAX30102()
+#    red, ir = m.read_sequential()
+#    print(red,ir)
 
     # time.sleep(2)

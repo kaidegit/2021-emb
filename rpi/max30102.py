@@ -1,5 +1,5 @@
 # -*-coding:utf-8-*-
-
+# github上找的，实测py3可用
 # this code is currently for python 2.7
 from __future__ import print_function
 from time import sleep
